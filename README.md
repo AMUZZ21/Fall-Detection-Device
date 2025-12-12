@@ -15,7 +15,7 @@ An Arduino-based fall/accident detection system that monitors sudden impacts usi
 
 ## Hardware Required
 
-- Arduino Uno or Nano
+- Arduino Pro Mini
 - **MPU6050** accelerometer
 - **GPS Module** (e.g., NEO-6M)
 - **SIM800L GSM Module**
@@ -34,8 +34,8 @@ An Arduino-based fall/accident detection system that monitors sudden impacts usi
 | SIM800L TX     | 3          |
 | GPS RX         | 5          |
 | GPS TX         | 6          |
-| MPU6050 SDA    | A4 (Arduino Uno/Nano) |
-| MPU6050 SCL    | A5 (Arduino Uno/Nano) |
+| MPU6050 SDA    | A4         |
+| MPU6050 SCL    | A5         |
 
 ---
 
