@@ -1,12 +1,12 @@
 # Fall Detection Device
 
-An Arduino-based fall/accident detection system that monitors sudden impacts, tracks location via GPS, and sends real-time alerts using a GSM module.
+An Arduino-based fall/accident detection system that monitors sudden impacts using an **MPU6050 accelerometer**, tracks location via GPS, and sends real-time alerts using a GSM module.
 
 ---
 
 ## Features
 
-- **Impact Detection:** Uses MPU6050 accelerometer to detect falls or sudden impacts.
+- **Impact Detection:** Uses **MPU6050 accelerometer** to detect falls or sudden impacts.
 - **GPS Tracking:** Captures latitude and longitude coordinates for accurate location tracking.
 - **Alert System:** Sends SMS with Google Maps link and automatically makes a call to a predefined number.
 - **Visual & Audio Alerts:** LED and buzzer activate when a fall is detected.
@@ -34,6 +34,8 @@ An Arduino-based fall/accident detection system that monitors sudden impacts, tr
 | SIM800L TX     | 3          |
 | GPS RX         | 5          |
 | GPS TX         | 6          |
+| MPU6050 SDA    | A4 (Arduino Uno/Nano) |
+| MPU6050 SCL    | A5 (Arduino Uno/Nano) |
 
 ---
 
@@ -41,7 +43,7 @@ An Arduino-based fall/accident detection system that monitors sudden impacts, tr
 
 - Arduino IDE
 - Libraries:
-  - `Wire.h` (for I2C communication)
+  - `Wire.h` (for I2C communication with **MPU6050**)
   - `MPU6050.h` (for accelerometer)
   - `SoftwareSerial.h` (for GSM and GPS modules)
 
@@ -60,7 +62,7 @@ An Arduino-based fall/accident detection system that monitors sudden impacts, tr
 
 ## How It Works
 
-1. The MPU6050 continuously monitors acceleration.
+1. The **MPU6050** continuously monitors acceleration.
 2. If the total acceleration exceeds the **impact threshold (1.4g)**, a fall is detected.
 3. The GPS module fetches the current coordinates.
 4. The system sends an SMS with a Google Maps link to the predefined phone number.
